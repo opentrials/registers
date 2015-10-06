@@ -1,0 +1,106 @@
+{
+  "name": "opentrials-publicregistries",
+  "title": "Public Registries for OpenTrials",
+  "homepage": "http://opentrials.net/",
+  "version": "0.1.0",
+  "license": "PDDL-1.0",
+  "resources": [
+    {
+      "name": "registries",
+      "path": "data/registries.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 6949,
+      "schema": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "slug",
+            "type": "string",
+            "unique": true,
+            "description": ""
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "who_member_of",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "who_affiliated_registry",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "who_partner_status",
+            "type": "string",
+            "enum": ["partner","primary"],
+            "description": "Primary Registries in the WHO Registry Network meet specific criteria for content, quality and validity, accessibility, unique identification, technical capacity and administration. Primary Registries meet the requirements of the ICMJE."
+          },
+          {
+            "name": "physical_address",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "license_url",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "data_access_type",
+            "type": "string",
+            "enum": ["scrape", "download", "api"],
+            "description": ""
+          },
+          {
+            "name": "number_of_trials",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "coverage",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "record_schema_url",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dump_url",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "primaryKey": "slug"
+      }
+    }
+  ],
+  "description": "This is Data Package with information on public registries of clinical",
+  "repository": "https://github.com/okfn/opentrials-publicregistries.git"
+}
