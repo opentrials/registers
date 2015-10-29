@@ -11,6 +11,11 @@ The majority of information about registries comes from the
 (International Clinical Trials Registry Platform) and the websites of
 the individual registries.
 
+For registers that are members of WHO's ICTRP, another option for data
+acquisition would be to write a generic parser for the XML dump
+provided to ICTRP.  We would also need to source the dump URL per
+register.
+
 ## Existing Tooling for Scraping Clinical Trials Data
 
 ### ClinicalTrials.gov
@@ -52,6 +57,9 @@ This is both the code and scraper for the Brazilian Clinical Trials
 Registry.  The repo actually contains a very small dump (57 trials in
 XML form) in the repo.  Trials have WHO's UTN
 ([Uniform Trial Number](http://www.who.int/ictrp/unambiguous_identification/utn/en/)):
+Another option for data acquisition would be to write a generic parser
+for registers that provide XML dumps to ICTRP.  DUMP_URL =
+'http://www.ensaiosclinicos.gov.br/rg/all/xml/ictrp'.
 
 https://github.com/bireme/opentrials/tree/master/data
 
