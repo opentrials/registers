@@ -3,9 +3,10 @@
 This is [data package](http://dataprotocols.org/data-packages/) with
 information on public and private registries of clinical trials.  It
 intended to be used to track sources of trial data for the
-[OpenTrials](http://opentrials.net) platform.
+[OpenTrials](http://opentrials.net) platform and to document existing
+and possible methods of data extraction.
 
-The majority of this information comes from the
+The majority of information about registries comes from the
 [WHO ICTRP](http://www.who.int/ictrp/network/primary/en/)
 (International Clinical Trials Registry Platform) and the websites of
 the individual registries.
@@ -14,21 +15,32 @@ the individual registries.
 
 ### ClinicalTrials.gov
 
+Many options for scraping Clinical Trials exist.  It is the largest
+source for structured clinical trials data.  The scraper we will use
+has been started here:
+
 https://github.com/roll/clinicaltrials-scraper
 
 ### ISRCTN.org
 
-Nascent scraper for morph.io for ISRCTN.
+This is currently a very basic scraper for scraping ISRCTN (currently
+only downloading identifiers e.g. ISRCTN41598423, but can be easily
+extended).
 
 https://github.com/annapowellsmith/isrctn
 
 ### EU Clinical Trials Register (EU-CTR)
 
-Potentially useful R package for retrieving both CT and EU data.
+There are comparatively few options for scraping EU Clinical Trials
+Register data, but a potentially useful R package for retrieving both
+CT and EU data exists here.
 
 https://github.com/rfhb/ctrdata
 
 ### Australian New Zealand Clinical Trials Registry (ANZCTR)
+
+There is an existing scraper written for scraping data from the
+Australia and New Zealand register here:
 
 https://classic.scraperwiki.com/scrapers/australia_new_zealand_clinical_trials/
 
@@ -36,85 +48,95 @@ https://github.com/tfmorris/australia_new_zealand_clinical_trials/blob/master/sc
 
 ### Brazilian Clinical Trials Registry (ReBec)
 
-Brazilian Clinical Trials Registry code & scraper
+This is both the code and scraper for the Brazilian Clinical Trials
+Registry.  The repo actually contains a very small dump (57 trials in
+XML form) in the repo.  Trials have WHO's UTN
+([Uniform Trial Number](http://www.who.int/ictrp/unambiguous_identification/utn/en/)):
 
 https://github.com/bireme/opentrials/tree/master/data
 
 ### Japan Primary Registries Network (JPRN)
 
+This is a scraper for the Japanese network of clinical trials.  We
+would most likely create an entirely new scraper:
+
 https://github.com/nick111/MedicalDataCrawl/commit/bdefcfa27009dca60d89edc40a806b19be2dd3a9
 
 ### Clinical Trial Registry of the University Medical Center Freiburg
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### DeReG - German Registry for Somatic Gene-Transfer Trials
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Centre for Clinical Trials, University of Hong Kong
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Chinese Clinical Trial Registry (ChiCTR)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Clinical Research Information Service (CRiS), Republic of Korea
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Clinical Trials Registry - India (CTRI)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Cuban Public Registry of Clinical Trials(RPCEC)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### German Clinical Trials Register (DRKS)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Iranian Registry of Clinical Trials (IRCT)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Thai Clinical Trials Registry (TCTR)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### The Netherlands National Trial Register (NTR)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Pan African Clinical Trial Registry (PACTR)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### Sri Lanka Clinical Trials Registry (SLCTR)
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### UMIN CTR Website
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### JapicCTI Website
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### JMACCT CTR Website
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### NIHR Clinical Research Network
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
 
 ### South African National Clinical Trials Register
 
-No existing tooling found
+No existing tooling found.  Would write new scraper.
+
+### International Prospective Register of Systematic Reviews
+
+No existing tooling found.  Would write new scraper.
 
 ## Other Tools
 
@@ -148,5 +170,8 @@ https://trialverse.org/
 ### CrossRef Clinical Trials Importer
 
 Not exactly a scraper, but tooling for importing clinical trials data.
+Most useful for providing regular expressions (and tests!) for
+matching different clinical trials identifiers (e.g. ISRCTN41598423,
+NCT02590237, etc.):
 
 https://github.com/CrossRef/clinical-trials-importer/blob/develop/resources/clinical-trial-registries.edn
