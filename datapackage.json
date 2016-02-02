@@ -1,43 +1,62 @@
 {
   "name": "opentrials-publicregistries",
-  "title": "Public Registries for OpenTrials",
+  "title": "Public and Private registers for OpenTrials",
   "homepage": "http://opentrials.net/",
   "version": "0.1.0",
   "license": "PDDL-1.0",
   "resources": [
     {
-      "name": "registries",
-      "path": "data/registries.csv",
+      "name": "registers",
+      "path": "data/registers.csv",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 6949,
       "schema": {
         "fields": [
           {
-            "name": "name",
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "slug",
             "type": "string",
-            "unique": true,
-            "description": ""
+            "description": "Short URL-compatible identifier"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Name of register"
           },
           {
             "name": "url",
             "type": "string",
-            "description": ""
+            "description": "Main URL for general information"
           },
           {
-            "name": "who_member_of",
+            "name": "license_url",
             "type": "string",
-            "description": ""
+            "description": "License URL (if it exists)"
           },
           {
-            "name": "who_affiliated_registry",
+            "name": "download_url",
             "type": "string",
-            "description": ""
+            "description": "Download URL (if it exists)"
+          },
+          {
+            "name": "data_access_type",
+            "type": "string",
+            "enum": ["scrape", "download", "api"],
+            "description": "Method of downloading information"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Description"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Notes"
+          },
+          {
+            "name": "public",
+            "type": "boolean",
+            "description": "Is this private or public register?"
           },
           {
             "name": "who_partner_status",
@@ -48,59 +67,33 @@
           {
             "name": "physical_address",
             "type": "string",
-            "description": ""
+            "description": "Physical address for the register"
           },
           {
             "name": "email",
             "type": "string",
-            "description": ""
-          },
-          {
-            "name": "license_url",
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "data_access_type",
-            "type": "string",
-            "enum": ["scrape", "download", "api"],
-            "description": ""
+            "description": "Public contact email for the register"
           },
           {
             "name": "number_of_trials",
             "type": "integer",
-            "description": ""
-          },
-          {
-            "name": "description",
-            "type": "string",
-            "description": ""
+            "description": "Number of trials in the register"
           },
           {
             "name": "coverage",
             "type": "string",
-            "description": ""
+            "description": "Country the register targets"
           },
           {
             "name": "record_schema_url",
             "type": "string",
-            "description": ""
-          },
-          {
-            "name": "dump_url",
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "notes",
-            "type": "string",
-            "description": ""
+            "description": "URL for an example of record schema"
           }
         ],
         "primaryKey": "slug"
       }
     }
   ],
-  "description": "This is Data Package with information on public registries of clinical",
-  "repository": "https://github.com/okfn/opentrials-publicregistries.git"
+  "description": "This is Data Package with information on public and private registers of clinical trials",
+  "repository": "https://github.com/opentrials/registers"
 }
