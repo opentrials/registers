@@ -1,5 +1,7 @@
 # OpenTrials Public and Private Registries
 
+[![Gitter](https://img.shields.io/gitter/room/opentrials/chat.svg)](https://gitter.im/opentrials/chat)
+
 This is [data package](http://dataprotocols.org/data-packages/) with
 information on public and private registries of clinical trials.  It
 intended to be used to track sources of trial data for the
